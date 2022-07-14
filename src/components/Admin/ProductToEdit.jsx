@@ -70,8 +70,6 @@ export default function ProductToEdit() {
     dispatch(editPost(id, state));
     swal("Cambios guardados exitosamente");
     window.location.reload();
-    history.push("/admin/publicaciones");
-    
   };
 
   const base64Convert = (ev) => {

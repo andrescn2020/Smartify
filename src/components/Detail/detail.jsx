@@ -158,7 +158,7 @@ export default function Detail() {
           <img src={PID.images} alt="marcas" width={300} />
           <img src={PID.images} alt="marcas" width={500} />
         </div> */}
-        <div className={modo}>
+     
         <div className="content">
           <div
             id="carouselExampleIndicators"
@@ -167,6 +167,7 @@ export default function Detail() {
             style={{width: "700px", height: "500px"}}
           >
             <div className="carousel-indicators" style={{marginBottom: "-3rem", height: "50px"}}>
+            <div className={modo}>
               <img
                 src={PID.images}
                 alt
@@ -229,12 +230,15 @@ export default function Detail() {
                   backgroundColor: "transparent",
                   height: "100%"}}
               />
+              </div>
             </div>
             <div className="carousel-inner" style={{width: "700px", maxHeight: "max-content", display: "inline-flex", justifyContent: "center"}}>
+            <div className={modo}>
               <div className="carousel-item active"  style={{marginRight: "0", width: "max-content", transition: "transform 0.5s ease-in-out"}}>
                 <img src={PID.images} style={{maxWidth: "100%", maxHeight: "100%"}} alt="..." />
               </div>
               <div className="carousel-item" style={{marginRight: "0", width: "max-content"}}>
+              
                 <img
                   src={PID.additionalphotos?.[0]}
                   style={{maxWidth: "100%", maxHeight: "100%"}}
@@ -256,7 +260,7 @@ export default function Detail() {
                 />
               </div>
               
-            </div>
+              </div>
             </div>
             <button
               className="carousel-control-prev"
