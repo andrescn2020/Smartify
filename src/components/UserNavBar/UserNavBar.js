@@ -6,7 +6,7 @@ import { BsFillCartFill } from "react-icons/bs";
 import { BsPersonCircle } from "react-icons/bs";
 import axios from "axios";
 import SearchBar from "../SearchBar/Searchbar";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getLocalCart, modoOscuro, language, loadingPage, cancelLoadingPage } from "../../Actions";
 import SmartifyFinal from "../../images/SmartifyFinal.png";
@@ -83,6 +83,7 @@ export default function UserNavBar({ setCurrentPage }) {
   const lan = useSelector((state) => state.language);
   const [user, setUser] = useState();
   const [open, setOpen] = useState(false);
+  const history = useHistory()
 
   const dispatch = useDispatch();
 
