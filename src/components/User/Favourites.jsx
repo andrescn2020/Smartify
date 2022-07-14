@@ -50,10 +50,6 @@ export default function Favourites() {
     });
   };
 
-  if(loading){
-    dispatch(cancelLoadingPage());
-  }
- 
 
   return (
     <div className={styles.fondo}>
