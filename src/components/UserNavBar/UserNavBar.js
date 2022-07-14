@@ -190,7 +190,9 @@ export default function UserNavBar({ setCurrentPage }) {
           auth.currentUser.email === "finalproyect25a@gmail.com" ? (
       <div className="container-fluid" style={{ margin: "10px" }}>
             <Link to="/">
+              <div className={modo}>
         <img src={SmartifyFinal} className={styles.logo} />
+        </div>
         </Link>
         <button
           className="navbar-toggler"
@@ -310,7 +312,9 @@ export default function UserNavBar({ setCurrentPage }) {
       <>
       <div className="container-fluid" style={{ margin: "10px" }}>
       <Link to="/">
+      <div className={modo}>
         <img src={SmartifyFinal} className={styles.logo} />
+        </div>
         </Link>
         <button
           className="navbar-toggler"
@@ -450,7 +454,9 @@ export default function UserNavBar({ setCurrentPage }) {
       )) : (
         <div className="container-fluid" style={{ margin: "10px" }}>
               <Link to="/">
+              <div className={modo}>
         <img src={SmartifyFinal} className={styles.logo} />
+        </div>
         </Link>
           <button
             className="navbar-toggler"
