@@ -102,7 +102,9 @@ const NavBar = ({ setCurrentPage }) => {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid" style={{ margin: "10px" }}>
         <Link to="/">
+          <div className={modo}>
         <img src={SmartifyFinal} className={styles.logo} />
+        </div>
         </Link>
         <button
           className="navbar-toggler"
