@@ -56,10 +56,10 @@ export default function MiPerfil() {
 
     await updatePassword(user, newPw)
       .then(() => {
-        alert("La contraseña se actualizo correctamente");
+        swal("La contraseña se actualizo correctamente");
       })
       .catch((error) => {
-        alert("No se ha podido restablecer contraseña");
+        swal("No se ha podido restablecer contraseña");
       });
 
     document.getElementById("pw").value = "";
@@ -76,11 +76,11 @@ export default function MiPerfil() {
       };
 
       await axios.put(`https://back25ademo.herokuapp.com/user/${user.email}/edit`, b);
-      alert("Actualización exitosa");
+      swal("Actualización exitosa");
       document.getElementById("userName").value = "";
       window.location.reload();
     } catch (error) {
-      alert("No se pudieron actualidar los datos");
+      swal("No se pudieron actualidar los datos");
     }
     document.getElementById("userAddress").value = "";
     verificarQueHayaUsuarioLogueado();
@@ -96,11 +96,11 @@ export default function MiPerfil() {
       };
 
       await axios.put(`https://back25ademo.herokuapp.com/user/${user.email}/edit`, b);
-      alert("Actualización exitosa");
+      swal("Actualización exitosa");
       document.getElementById("userAddress").value = "";
       window.location.reload();
     } catch (error) {
-      alert("No se pudieron actualidar los datos");
+      swal("No se pudieron actualidar los datos");
     }
 
     document.getElementById("userAddress").value = "";
@@ -122,11 +122,11 @@ export default function MiPerfil() {
           image: base64,
         });
 
-        alert("Operacion exitosa");
+        swal("Operacion exitosa");
         window.location.reload();
       } catch (error) {
         console.log(error);
-        alert("No se actualizaron los datos");
+        swal("No se actualizaron los datos");
       }
     };
   };
@@ -138,11 +138,11 @@ export default function MiPerfil() {
         image: ''
       });
 
-      alert("Imagen removida");
+      swal("Imagen removida");
       window.location.reload();
     } catch (error) {
       console.log(error);
-      alert("No se actualizaron los datos");
+      swal("No se actualizaron los datos");
     }
   }
 

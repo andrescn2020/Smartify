@@ -6,19 +6,24 @@ import axios from "axios";
 import Card from "../card/Card";
 import UserNavBar from "../UserNavBar/UserNavBar";
 import { useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import BtnBack from "../back/BtnBack";
 import styles from './styles/Favourites.module.css'
 import { comLang } from "./styles/MisComprasLang";
+import { cancelLoadingPage, loadingPage } from "../../Actions";
 
 export default function Favourites() {
   const [user, setUser] = useState();
   const history = useHistory()
   const favs = useSelector(state => state.favs)
   const lan = useSelector((state) => state.language);
+  const loading = useSelector((state) => state.loading)
+  const dispatch = useDispatch();
 
   let emailUser = "";
+
   useEffect(() => {
+    dispatch(loadingPage());
     verificarQueHayaUsuarioLogueado();
   }, [favs]);
 
@@ -35,6 +40,7 @@ export default function Favourites() {
         }
         setUser(user.data);
         emailUser = auth.currentUser.email;
+        dispatch(cancelLoadingPage());
       }
     });
   };
@@ -42,6 +48,7 @@ export default function Favourites() {
   return (
     <div className={styles.fondo}>
       <UserNavBar />
+      {!loading ? <div>
       {user ? (
         <div>
           <BtnBack/>
@@ -63,9 +70,15 @@ export default function Favourites() {
           })}
           </div>
         </div>
+        
       ) : (
         <h1>No tienes favoritos</h1>
       )}
+      </div> : <div class="d-flex justify-content-center align-items-center" style={{marginBlock: "25%"}}>
+<div style={{width: "10rem", height: "10rem"}} class="spinner-grow" role="status">
+ 
+</div>
+</div>}
     </div>
   );
 }

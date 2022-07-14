@@ -121,8 +121,8 @@ export default function UserNavBar({ setCurrentPage }) {
   const logout = async () => {
     await signOut(auth);
     setUser(false);
-   
-     window.location.reload()
+    history.push("/");
+     window.location.reload();
 
     // window.location.reload()
   };
