@@ -52,11 +52,11 @@ const Cart = () => {
         let user = await axios.get(
           `https://back25ademo.herokuapp.com/user/${currentUser.email}`
         );
-        // if(user.data.banned){
+        if(user.data.banned){
 
-        //   history.push("/banned")
+          history.push("/banned")
 
-        // }
+        }
         setTotalItems(items)
         setTotalPrice(price);
       }

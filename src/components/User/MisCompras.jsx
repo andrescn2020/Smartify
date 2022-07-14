@@ -100,7 +100,7 @@ export default function MisCompras() {
 
 
   return (
-    <>
+    <div className={styles.fondo}>
       <UserNavBar />
       <BtnBack />
       <h2 className=" row justify-content-center mb-3">{comLang[lan].mis}</h2>
@@ -194,10 +194,10 @@ export default function MisCompras() {
           
         </div>
       ) : (
-        <h1>{comLang[lan].log}</h1>
+        <h1></h1>
       )}
       
-    </>
+    </div>
     
   );
 }

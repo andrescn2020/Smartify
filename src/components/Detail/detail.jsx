@@ -22,6 +22,7 @@ import Footer from "../Footer/Footer";
 import swal from "sweetalert";
 
 export default function Detail() {
+
   const modo = useSelector(state => state.modo)
  
 
@@ -157,6 +158,7 @@ export default function Detail() {
           <img src={PID.images} alt="marcas" width={300} />
           <img src={PID.images} alt="marcas" width={500} />
         </div> */}
+        <div className={modo}>
         <div className="content">
           <div
             id="carouselExampleIndicators"
@@ -253,6 +255,8 @@ export default function Detail() {
                   alt=""
                 />
               </div>
+              
+            </div>
             </div>
             <button
               className="carousel-control-prev"

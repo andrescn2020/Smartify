@@ -10,7 +10,23 @@
         flex-direction:column;
     }
 }
+
 .fondo{
     background-color: #F6F8FA;
-    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
   }
+
+
+  html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+

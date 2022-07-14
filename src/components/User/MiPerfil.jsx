@@ -292,7 +292,7 @@ export default function MiPerfil() {
           </section>
         
       ) : (
-        <h1>{miPerfilLang[lan].noEstasLogueado}</h1>
+        <h1></h1>
       )}
     </div>
     </div>
