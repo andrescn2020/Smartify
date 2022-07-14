@@ -39,8 +39,9 @@ export default function Favourites() {
           history.push("/banned")
 
         }
-        dispatch(cancelLoadingPage());
+        
         setUser(user.data);
+        console.log(user);
         emailUser = auth.currentUser.email;
         
         
@@ -48,6 +49,11 @@ export default function Favourites() {
       
     });
   };
+
+  if(loading){
+    dispatch(cancelLoadingPage());
+  }
+ 
 
   return (
     <div className={styles.fondo}>
