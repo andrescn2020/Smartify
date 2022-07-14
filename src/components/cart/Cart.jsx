@@ -50,7 +50,7 @@ const Cart = () => {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `http://localhost:3001/user/${currentUser.email}`
+          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
         );
         // if(user.data.banned){
 
@@ -74,7 +74,7 @@ const Cart = () => {
 
     let userInfo = await dispatch(getUser(auth.currentUser.email))
 
-    await axios.post(`http://localhost:3001/userChangeQty/${userInfo.payload.email}`, {
+    await axios.post(`https://back25ademo.herokuapp.com/userChangeQty/${userInfo.payload.email}`, {
       actualCartWithQty: cart,
       emailUser: userInfo.payload.email
     });

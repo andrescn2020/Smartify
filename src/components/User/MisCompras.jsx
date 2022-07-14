@@ -35,7 +35,7 @@ export default function MisCompras() {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `http://localhost:3001/user/${currentUser.email}`
+          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
         );
         if (user.data.banned) {
 
@@ -82,7 +82,7 @@ export default function MisCompras() {
     let productID = e.nativeEvent.path[1].id;
     if (input && puntaje) {
 
-      await axios.put(`http://localhost:3001/home/${user.email}/${productID}`, {
+      await axios.put(`https://back25ademo.herokuapp.com/home/${user.email}/${productID}`, {
         comentario: input, rating: puntaje
       });
       swal("Review agregada")

@@ -1,4 +1,4 @@
-const sitioUrl = 'http://localhost:3001';
+const sitioUrl = 'https://back25ademo.herokuapp.com';
 export const fetchstoken = async (endpoint, data, method = 'GET') =>{
     const url = `${ sitioUrl }/${ endpoint }`;
 

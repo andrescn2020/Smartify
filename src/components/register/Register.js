@@ -27,7 +27,7 @@ const Register = () => {
   const [mails, setEmails] = useState();
 
   const getEmails = async () => {
-    let allM = (await axios.get("http://localhost:3001/user")).data;
+    let allM = (await axios.get("https://back25ademo.herokuapp.com/user")).data;
     allM = allM.map((elem) => elem.email);
     setEmails(allM);
   };
@@ -109,11 +109,11 @@ const Register = () => {
           lastname: input.lastname,
           address: input.address
         }
-        await axios.post("http://localhost:3001/user", newUser);
+        await axios.post("https://back25ademo.herokuapp.com/user", newUser);
 
         for (let i = 0; i < cart.length; i++) {
           
-          await axios.put(`http://localhost:3001/cart/${auth.currentUser.email}/${cart[i].id}`)
+          await axios.put(`https://back25ademo.herokuapp.com/cart/${auth.currentUser.email}/${cart[i].id}`)
           
         }
 

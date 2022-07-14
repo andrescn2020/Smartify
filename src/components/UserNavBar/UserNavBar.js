@@ -111,7 +111,7 @@ export default function UserNavBar({ setCurrentPage }) {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `http://localhost:3001/user/${currentUser.email}`
+          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
         );
         setUser(user.data);
       }

@@ -4,7 +4,7 @@ import swal from "sweetalert";
 
 export function getPhones() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/home");
+    var json = await axios.get("https://back25ademo.herokuapp.com/home");
     return dispatch({
       type: "GET_PHONES",
       payload: json.data,
@@ -37,7 +37,7 @@ export function cancelLoadingPage() {
 
 export function getPhonesByModel(model) {
   return async function (dispatch) {
-    var json = await axios.get(`http://localhost:3001/home?model=${model}`);
+    var json = await axios.get(`https://back25ademo.herokuapp.com/home?model=${model}`);
     return dispatch({
       type: "GET_PHONES_BY_NAME",
       payload: json.data,
@@ -47,7 +47,7 @@ export function getPhonesByModel(model) {
 export function getDetails(id) {
   return async function (dispatch) {
     try {
-      const json = await axios.get(`http://localhost:3001/home/` + id);
+      const json = await axios.get(`https://back25ademo.herokuapp.com/home/` + id);
       return dispatch({
         type: "GET_DETAILS",
         payload: json.data,
@@ -70,7 +70,7 @@ export const cleanUp = () => {
 export const filters = (setters) => (dispatch) => {
   
   return axios
-    .post("http://localhost:3001/filtersAndOrders", setters)
+    .post("https://back25ademo.herokuapp.com/filtersAndOrders", setters)
     .then((response)=>{localStorage.setItem("filter",JSON.stringify(setters)) 
   return response})
     .then((response) => {
@@ -93,7 +93,7 @@ export function getLocalFilter() {
 
 export function postPhone(payload) {
   return async function () {
-    const json = await axios.post("http://localhost:3001/admin/post", payload);
+    const json = await axios.post("https://back25ademo.herokuapp.com/admin/post", payload);
     return json;
   };
 }
@@ -121,7 +121,7 @@ export const addToCart = (itemID) => {
 
 export const addToCartUser = (email, itemID) => {
   return async function (dispatch) {
-    let json = await axios.put((`http://localhost:3001/cart/${email}/${itemID}`))
+    let json = await axios.put((`https://back25ademo.herokuapp.com/cart/${email}/${itemID}`))
     return dispatch({
       type: "ADD_TO_CART_USER",
       payload: {
@@ -145,7 +145,7 @@ export const removeFromCart = (itemID) => {
 
 export const clearCart = (email) => {
   return async function (dispatch) {;
-    await axios.put(`http://localhost:3001/emptyCart/${email}`)
+    await axios.put(`https://back25ademo.herokuapp.com/emptyCart/${email}`)
     return dispatch({
       type: "CLEAR_CART_POST_BUY",
     });
@@ -154,7 +154,7 @@ export const clearCart = (email) => {
 
 export const banUser = (email) => {
   return async function (dispatch) {
-    await axios.put(`http://localhost:3001/banned/${email}`)
+    await axios.put(`https://back25ademo.herokuapp.com/banned/${email}`)
     window.location.reload()
     return dispatch({
       type: "BAN_USER",
@@ -165,7 +165,7 @@ export const banUser = (email) => {
 
 export const unbanUser = (email) => {
   return async function (dispatch) {
-    await axios.put(`http://localhost:3001/banned/unban/${email}`)
+    await axios.put(`https://back25ademo.herokuapp.com/banned/unban/${email}`)
     window.location.reload()
     return dispatch({
       type: "UNBAN_USER",
@@ -176,7 +176,7 @@ export const unbanUser = (email) => {
 
 // export const emptyCart = (email) => {
 //   return async function (dispatch) {
-//     await axios.put(`http://localhost:3001/user//emptyCart/${email}`)
+//     await axios.put(`https://back25ademo.herokuapp.com/user//emptyCart/${email}`)
 //     return dispatch({
 //       type: "EMPTY_CART",
 //       payload: []
@@ -187,7 +187,7 @@ export const unbanUser = (email) => {
 
 export const removeFromCartUser = (email, itemID) => {
   return async function (dispatch) {
-    await axios.put((`http://localhost:3001/cart/delete/${email}/${itemID}`))
+    await axios.put((`https://back25ademo.herokuapp.com/cart/delete/${email}/${itemID}`))
     return dispatch({
       type: "REMOVE_FROM_CART_USER",
       payload: {
@@ -211,7 +211,7 @@ export const adjustItemQty = (itemID, qty) => {
 
 export function postAdmin() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/admin/posts");
+    var json = await axios.get("https://back25ademo.herokuapp.com/admin/posts");
     return dispatch({
       type: "ADMIN_POSTS",
       payload: json.data,
@@ -222,7 +222,7 @@ export function postAdmin() {
 export function editPost(id, payload) {
   return async function (dispatch) {
     var json = await axios.put(
-      `http://localhost:3001/admin/posts/${id}`,
+      `https://back25ademo.herokuapp.com/admin/posts/${id}`,
       payload
     );
 
@@ -242,7 +242,7 @@ export const loadCurrentItem = (item) => {
 
 export function getAllUsers() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/user");
+    var json = await axios.get("https://back25ademo.herokuapp.com/user");
     return dispatch({
       type: "GET_USERS",
       payload: json.data,
@@ -253,7 +253,7 @@ export function getAllUsers() {
 export function becomeAdmin(email) {
   swal("Se convirtio en Admin satisfactoriamente")
   return async function () {
-    const json = await axios.put(`http://localhost:3001/admin/${email}`);
+    const json = await axios.put(`https://back25ademo.herokuapp.com/admin/${email}`);
     window.location.reload();
     return json;
   };
@@ -262,7 +262,7 @@ export function becomeAdmin(email) {
 export function removeAdmin(email) {
   swal("Se removio el privilegio de Admin satisfactoriamente")
   return async function () {
-    const json = await axios.put(`http://localhost:3001/admin/removeAdmin/${email}`);
+    const json = await axios.put(`https://back25ademo.herokuapp.com/admin/removeAdmin/${email}`);
     window.location.reload();
     return json;
   };
@@ -270,7 +270,7 @@ export function removeAdmin(email) {
 
 export function getUser(email) {
   return async function (dispatch) {
-    var json = await axios.get(`http://localhost:3001/user/${email}`);
+    var json = await axios.get(`https://back25ademo.herokuapp.com/user/${email}`);
     return dispatch({
       type: "GET_USER",
       payload: json.data,
@@ -280,7 +280,7 @@ export function getUser(email) {
 
 export function usersAdmin() {
   return async function (dispatch) {
-    var json = await axios.get(`http://localhost:3001/admin/users`);
+    var json = await axios.get(`https://back25ademo.herokuapp.com/admin/users`);
     return dispatch({
       type: "USERS_ADMIN",
       payload: json.data,
@@ -290,7 +290,7 @@ export function usersAdmin() {
 
 export function getQuestions() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/pregunta");
+    var json = await axios.get("https://back25ademo.herokuapp.com/pregunta");
     return dispatch({
       type: "GET_QUESTIONS",
       payload: json.data,
@@ -314,7 +314,7 @@ export const modoOscuro = (modo) => {
 
 export const deleteFav = (email, id) => {
   return async function (dispatch) {
-    await axios.put(`http://localhost:3001/favourites/delete/${email}/${id}`)
+    await axios.put(`https://back25ademo.herokuapp.com/favourites/delete/${email}/${id}`)
     return dispatch({
       type: "REMOVE_FAVS",
       payload: {
@@ -354,7 +354,7 @@ export function pageOne() {
 
 export const addFav = (email, id) => {
   return async function (dispatch) {
-    await axios.put(`http://localhost:3001/favourites/${email}/${id}`)
+    await axios.put(`https://back25ademo.herokuapp.com/favourites/${email}/${id}`)
     return dispatch({
       type: "ADD_FAVS",
       payload: {

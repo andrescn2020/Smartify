@@ -27,7 +27,7 @@ const CartItem = (props) => {
 
   const axiosPeticionById = async () => {
 
-    let st = (await axios.get(`http://localhost:3001/home/${item.id}`));
+    let st = (await axios.get(`https://back25ademo.herokuapp.com/home/${item.id}`));
     setStockView(st.data.stock);
 
   }
@@ -36,7 +36,7 @@ const CartItem = (props) => {
    
     dispatch(adjustItemQty(props.item.id, input + 1));
     setInput(parseInt(input + 1));
-    let post = await axios.get(`http://localhost:3001/home/${props.item.id}`)
+    let post = await axios.get(`https://back25ademo.herokuapp.com/home/${props.item.id}`)
     if (parseInt(input) > post.data.stock - 1) {
       setInput(post.data.stock)
     }
@@ -58,14 +58,14 @@ const CartItem = (props) => {
 
     
 
-    //let post = await axios.get(`http://localhost:3001/home/${props.item.id}`)
+    //let post = await axios.get(`https://back25ademo.herokuapp.com/home/${props.item.id}`)
 
   }
   const onChangeHandler = async (e) => {
 
     setInput(e.target.value);
     dispatch(adjustItemQty(props.item.id, e.target.value));
-    let post = (await axios.get(`http://localhost:3001/home/${props.item.id}`))
+    let post = (await axios.get(`https://back25ademo.herokuapp.com/home/${props.item.id}`))
       .data;
 
     if (e.target.value > post.stock) {

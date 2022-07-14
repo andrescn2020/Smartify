@@ -46,7 +46,7 @@ const Login = () => {
 
       for (let i = 0; i < cart.length; i++) {
           
-        await axios.put(`http://localhost:3001/cart/${auth.currentUser.email}/${cart[i].id}`)
+        await axios.put(`https://back25ademo.herokuapp.com/cart/${auth.currentUser.email}/${cart[i].id}`)
         
       }
 
@@ -88,12 +88,12 @@ const Login = () => {
         };
       }
 
-      let database = await axios.get(`http://localhost:3001/user/${response.user.email}`)
+      let database = await axios.get(`https://back25ademo.herokuapp.com/user/${response.user.email}`)
       if(database.data) {
 
         for (let i = 0; i < cart.length; i++) {
           
-          await axios.put(`http://localhost:3001/cart/${response.user.email}/${cart[i].id}`)
+          await axios.put(`https://back25ademo.herokuapp.com/cart/${response.user.email}/${cart[i].id}`)
           
         }
 
@@ -101,11 +101,11 @@ const Login = () => {
 
       } else {
 
-      await axios.post(`http://localhost:3001/user`, createdUser);
+      await axios.post(`https://back25ademo.herokuapp.com/user`, createdUser);
 
       for (let i = 0; i < cart.length; i++) {
           
-        await axios.put(`http://localhost:3001/cart/${response.user.email}/${cart[i].id}`)
+        await axios.put(`https://back25ademo.herokuapp.com/cart/${response.user.email}/${cart[i].id}`)
         
       }
 
