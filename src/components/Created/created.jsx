@@ -213,7 +213,7 @@ export default function PhoneCreate() {
         stock: "",
       });
 
-      history.push("/");
+      window.location.reload();
     }
   }
 
