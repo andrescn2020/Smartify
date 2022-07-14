@@ -330,7 +330,7 @@ function rootReducer(state = initialState, action) {
     favs: removePhoneFromLocalStorage
   }
     case "ADD_FAVS":
-  console.log(action.payload)
+
   const fav = state.phones.find((product) => product.id === action.payload.id);
 
   const inFavs = state.favs.find((item) =>

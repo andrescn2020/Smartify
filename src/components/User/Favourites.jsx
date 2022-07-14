@@ -43,7 +43,7 @@ export default function Favourites() {
         emailUser = auth.currentUser.email;
         
       }
-      await dispatch(cancelLoadingPage());
+      dispatch(cancelLoadingPage());
     });
   };
 
