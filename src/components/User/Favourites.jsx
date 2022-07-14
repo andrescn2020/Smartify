@@ -41,9 +41,10 @@ export default function Favourites() {
         }
         setUser(user.data);
         emailUser = auth.currentUser.email;
+        dispatch(cancelLoadingPage());
         
       }
-      dispatch(cancelLoadingPage());
+      
     });
   };
 
