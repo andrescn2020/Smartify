@@ -23,7 +23,6 @@ export default function Favourites() {
   let emailUser = "";
 
   useEffect(() => {
-    dispatch(loadingPage());
     verificarQueHayaUsuarioLogueado();
     
   }, [favs]);
@@ -41,7 +40,6 @@ export default function Favourites() {
         }
         
         setUser(user.data);
-        console.log(user.data);
         emailUser = auth.currentUser.email;
         
       }
@@ -53,7 +51,6 @@ export default function Favourites() {
   return (
     <div className={styles.fondo}>
       <UserNavBar />
-      {!loading ? <div>
       {user ? (
         <div>
           <BtnBack/>
@@ -79,11 +76,6 @@ export default function Favourites() {
       ) : (
         <h1>No tienes favoritos</h1>
       )}
-      </div> : <div class="d-flex justify-content-center align-items-center" style={{marginBlock: "25%"}}>
-<div style={{width: "10rem", height: "10rem"}} class="spinner-grow" role="status">
- 
-</div>
-</div>}
     </div>
   );
 }
