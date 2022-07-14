@@ -25,6 +25,7 @@ export default function Favourites() {
   useEffect(() => {
     dispatch(loadingPage());
     verificarQueHayaUsuarioLogueado();
+    dispatch(cancelLoadingPage());
   }, [favs]);
 
   const verificarQueHayaUsuarioLogueado = () => {
@@ -40,7 +41,7 @@ export default function Favourites() {
         }
         setUser(user.data);
         emailUser = auth.currentUser.email;
-        dispatch(cancelLoadingPage());
+        
       }
     });
   };
