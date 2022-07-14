@@ -1,0 +1,14 @@
+.li {
+    list-style: none;
+}
+
+.ul {
+    margin-bottom: 100px;
+}
+
+.ul h2{
+    margin-bottom: 30px;
+}
+.fondo{
+    background-color: rgb(207, 204, 204);
+  }

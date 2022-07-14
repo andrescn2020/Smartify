@@ -1,0 +1,115 @@
+.fondo{
+  background-color:#F6F8FA;
+  font-weight: bold;
+  /* #f6f8fa */
+}
+
+.flex {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.divContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  /* margin-bottom: 27px; */
+  /* border: 1px solid red; */
+  
+}
+
+.spinnerSmartify {
+
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  background-color: red;
+  animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.divChange {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: center;
+  justify-content: left;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+.select {
+  width: 170px;
+  border-radius: 7px;
+  height: 35px;
+  
+}
+.dark{
+  filter:invert(1)
+}
+
+.navBar {
+
+  width: 100vw;
+  height: 15vh;
+
+}
+
+.byn{
+  background-color: #282c34;
+}
+
+.divSelect {
+  display: flex;
+  justify-content: center;
+  gap: 50px
+}
+.btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background-color: #182B69;
+  border-radius: 5px;
+}
+
+@media (max-width: 1300px) {
+  .divContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .divSelect {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+  }
+  .select {
+    height: 35px;
+    padding-left: 5px;
+  }
+}
+
+.letra {
+
+  font-weight: bold;
+
+}
+
+.body {
+
+  margin: 0
+
+}

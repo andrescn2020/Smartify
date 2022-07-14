@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.container h1 {
+    padding-top: 60px;
+}
+
+.containerDatos {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+    border-radius: 7px;
+}
+
+.containerDatos h1 {
+    margin-bottom: 50px;
+}
+
+
+
+.comprar {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+    .containerDatos{
+        width: 350px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

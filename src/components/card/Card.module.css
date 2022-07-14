@@ -1,0 +1,55 @@
+.card{
+    margin-left: 1px;
+    margin-top: 50px;
+    margin-block-end: 50px;
+    margin-right: 1px;
+    width: 280px;
+    background-color: rgba(243, 243, 243, 0.8);
+    backdrop-filter: blur(6px);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    text-align: center;
+    align-items: center;
+}
+.card:hover {
+  cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(50, 50, 50, 1);
+    transition: all 0.25s;
+    
+  }
+
+.image {
+    max-height: 16rem;
+    border-radius: 10px;
+}
+
+
+.card2 {
+    text-align: center;
+}
+
+.btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 380px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: rgb(80, 95, 214);
+  border-radius: 5px;
+}
+.btn:hover {
+  animation: pulsate 1.5s ease-in-out;
+  cursor: pointer;
+}
+@keyframes pulsate {
+  0% {
+      box-shadow:
+      0 0 25px #5ddcff,
+      0 0 50px #4e00c2;
+  }
+}
+

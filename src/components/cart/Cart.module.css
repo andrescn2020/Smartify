@@ -1,0 +1,37 @@
+.fondo{
+    background-color: #fff;
+    
+  }
+.cart {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    
+    height: 100%;
+    
+}
+.summary__checkoutBtn {
+    background: none;
+    
+    
+    background-color: #fff;
+}
+.cartSummary {
+    
+    
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .cart {
+        
+        flex-direction: column;
+        
+    }
+    .cartSummary {
+        
+        text-align: center;
+        
+    }
+}

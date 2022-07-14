@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+   place-content: center;
+ 
+    
+
+}
+.prf {
+
+    margin-top: 10px;
+
+}
+
+.containerCardHover:hover {
+    cursor: pointer;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 16px rgba(50, 50, 50, 1);
+      transition: all 0.25s;
+      
+    }
+    
+.input {
+
+    margin: 0;
+    width: 18rem;
+    height: 40px;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 5px;
+    margin-top: 1rem;
+
+}
+
+.containerCard {
+
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.btn {
+
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 18rem;
+    height: 3rem;
+    background-color: rgb(80, 95, 214);
+    border-radius: 5px;
+
+}
+
+.containerCard h2 {
+    margin-bottom: 30px;
+}

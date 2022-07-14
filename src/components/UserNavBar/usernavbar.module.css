@@ -1,0 +1,157 @@
+
+.navbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #AFD5EB;
+    color: black;
+    margin: 0px;
+    border-radius: 0px;
+    transition: ease 0.3 seg;
+    width: 100%;
+    position: sticky;
+    z-index: 999;
+  }
+  
+  .navbarLinks {
+     height: 100%;
+   transition: ease 0.3 seg;
+  }
+  
+  
+  .navbarLinks ul {
+     display: flex;
+     margin: 0;
+     padding: 0;
+    transition: ease 0.3 seg;
+  }
+  .navbarLinks li {
+     list-style: none;
+  }
+  .navbarLinksActive ul {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+   transition: ease 0.3 seg;
+     gap: 10px;
+  }
+  .navbarLinksActive li {
+     list-style: none;
+  }
+  .brandLogo {
+     margin-left: 40px;
+  }
+  .logo {
+    width: 7.5rem;
+    margin-left: 5rem;
+    height: 7.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .navbarLinks li a {
+     display: block;
+     margin-right: 40px;
+     text-decoration: none;
+     color: black;
+     
+     padding: 1rem;
+      transition: ease 0.3 seg;
+     font-family: "roboto", sans-serif;
+  }
+  
+  .navbarLinks li:hover {
+     background-color: rgb(255, 255, 255);
+     transition: ease 0.3 seg;
+  }
+  .prf2{
+    margin-left: 220px;
+    margin-top: 20px;
+  }
+  
+  .toggleButton {
+     position: absolute;
+     top: 2.3rem;
+     right: 1rem;
+     display: none;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 30px;
+     height: 21px;
+   transition: ease 0.3 seg;
+  }
+  
+  .toggleButton .bar {
+     height: 3px;
+     width: 100%;
+     background-color: black;
+     border-radius: 10px;
+     transition: ease 0.3 seg;
+     z-index: 100;
+  }
+  .cart{
+    margin-top: 10px;
+    margin-left: 190px;
+    text-decoration: none;
+    color: black;
+  }
+  .links {
+    text-decoration: none;
+    color: black;
+  }
+  .search {
+    margin-top: 30px;
+  }
+  
+  .prf {
+    margin-top:30px;
+    text-align: center;
+  }
+  @media (max-width: 1000px) {
+     .navbar {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+  
+     .toggleButton {
+         display: flex;
+     }
+  
+     .navbarLinks {
+         display: none;
+         width: 100%;
+        }
+        
+        .navbarLinks ul {
+          width: 100%;
+          flex-direction: column;
+          
+        }
+        
+     .navbarLinks ul li {
+         text-align: center;
+     }
+  
+     .navbarLinks ul li a {
+         padding: .5rem 1rem;
+     }
+  
+     .navbarLinksActive {
+         display: flex;
+     }
+     .navbarLinksActive  ul li{
+         text-align: center;
+     }
+     .search {
+        margin-left: 16px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .cart {
+      margin-left: 140px;
+    }
+    .prf2{
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
