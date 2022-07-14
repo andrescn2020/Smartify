@@ -39,9 +39,10 @@ export default function Favourites() {
           history.push("/banned")
 
         }
+        dispatch(cancelLoadingPage());
         setUser(user.data);
         emailUser = auth.currentUser.email;
-        dispatch(cancelLoadingPage());
+        
         
       }
       
