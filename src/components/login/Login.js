@@ -132,7 +132,7 @@ const Login = () => {
       {user ? null : <div className={style.container} style={{width: "40%", marginInline: "auto", marginBlock: "1%"}}>
           <div className={style.containerImage} style={{width: "322px", height: "200px", marginBottom: "16%"}}>
           
-          <div>
+          <div className={modo}>
           <img src={logo} className={style.image} style={{maxWidth: "100%", maxHeight: "100%"}} alt='logo'/>
           </div>
 
