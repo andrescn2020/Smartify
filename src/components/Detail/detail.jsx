@@ -167,7 +167,7 @@ export default function Detail() {
             style={{width: "700px", height: "500px"}}
           >
             <div className="carousel-indicators" style={{marginBottom: "-3rem", height: "50px"}}>
-            <div className={modo}>
+            <div className={modo} style={{width: "200px"}}>
               <img
                 src={PID.images}
                 alt
