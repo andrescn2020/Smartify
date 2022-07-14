@@ -199,7 +199,7 @@ const Login = () => {
           <Link to="register" style={{textDecoration: "none"}}>
             <p className={style.ancor2}>{loginLang[lan].registrarme}</p>
           </Link>
-          <Link to="home" style={{textDecoration: "none"}}>
+          <Link to="/" style={{textDecoration: "none"}}>
             <p className={style.ancor2}>{loginLang[lan].volver}</p>
           </Link>
           </div>
