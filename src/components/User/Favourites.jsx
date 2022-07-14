@@ -41,9 +41,8 @@ export default function Favourites() {
         }
         
         setUser(user.data);
-        console.log(user);
+        console.log(user.data);
         emailUser = auth.currentUser.email;
-        
         
       }
       
