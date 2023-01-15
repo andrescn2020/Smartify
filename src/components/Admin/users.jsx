@@ -68,7 +68,7 @@ export default function Users() {
 
   async function deleteUsers(email) {
     try {
-      await axios.delete(`https://back25ademo.herokuapp.com/admin/users/${email}`);
+      await axios.delete(`https://back2demo2-production.up.railway.app/admin/users/${email}`);
       swal("Usuario eliminado");
       window.location.reload();
     } catch (error) {

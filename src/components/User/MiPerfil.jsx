@@ -36,7 +36,7 @@ export default function MiPerfil() {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
+          `https://back2demo2-production.up.railway.app/user/${currentUser.email}`
         );
         if(user.data.banned){
 
@@ -75,7 +75,7 @@ export default function MiPerfil() {
         lastname: user.lastname,
       };
 
-      await axios.put(`https://back25ademo.herokuapp.com/user/${user.email}/edit`, b);
+      await axios.put(`https://back2demo2-production.up.railway.app/user/${user.email}/edit`, b);
       swal("Actualización exitosa");
       document.getElementById("userName").value = "";
       window.location.reload();
@@ -95,7 +95,7 @@ export default function MiPerfil() {
         lastname: user.lastname,
       };
 
-      await axios.put(`https://back25ademo.herokuapp.com/user/${user.email}/edit`, b);
+      await axios.put(`https://back2demo2-production.up.railway.app/user/${user.email}/edit`, b);
       swal("Actualización exitosa");
       document.getElementById("userAddress").value = "";
       window.location.reload();
@@ -117,7 +117,7 @@ export default function MiPerfil() {
       //aca en base64 el archivo ya esta convertido a texto
      
       try {
-        await axios.post("https://back25ademo.herokuapp.com/user/cambiarImagen", {
+        await axios.post("https://back2demo2-production.up.railway.app/user/cambiarImagen", {
           user: user.email,
           image: base64,
         });
@@ -133,7 +133,7 @@ export default function MiPerfil() {
 
   const removeImage = async() =>{
     try {
-      await axios.post("https://back25ademo.herokuapp.com/user/cambiarImagen", {
+      await axios.post("https://back2demo2-production.up.railway.app/user/cambiarImagen", {
         user: user.email,
         image: ''
       });

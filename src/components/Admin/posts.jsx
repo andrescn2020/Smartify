@@ -53,7 +53,7 @@ export default function Posts(props) {
   
   async function loadPosts() {
     try {
-      const post = (await axios("https://back25ademo.herokuapp.com/admin/posts")).data;
+      const post = (await axios("https://back2demo2-production.up.railway.app/admin/posts")).data;
       setPostsState(post);
     } catch (error) {
       console.log(error);
@@ -62,7 +62,7 @@ export default function Posts(props) {
 
   async function deletePost(id) {
     try {
-      await axios.delete(`https://back25ademo.herokuapp.com/admin/post/${id}`);
+      await axios.delete(`https://back2demo2-production.up.railway.app/admin/post/${id}`);
       await loadPosts();
       swal("Publicación borrada");
     } catch (error) {

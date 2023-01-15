@@ -23,7 +23,7 @@ function App() {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
+          `https://back2demo2-production.up.railway.app/user/${currentUser.email}`
         );
         setUser(user);
         if(user.data.banned){
@@ -39,7 +39,7 @@ function App() {
 
   //  useEffect(()=>{
   //    axios
-  //    .get("https://back25ademo.herokuapp.com/mercadopago/")
+  //    .get("https://back2demo2-production.up.railway.app/mercadopago/")
   //    .then((data)=>{
   //      setDatos(data.data)
   //      console.info('Contenido de data:', data)
@@ -57,7 +57,7 @@ function App() {
     pack.push(cart)
     pack.push(auth.currentUser.email)
     axios
-    .post(`https://back25ademo.herokuapp.com/mercadopago`, pack)
+    .post(`https://back2demo2-production.up.railway.app/mercadopago`, pack)
     .then((data)=>{
       setDatos(data.data)
     }).catch(err => console.error(err))

@@ -22,7 +22,7 @@ export default function StockEdit() {
 
   async function loadPosts() {
     try {
-      let post = (await axios.get("https://back25ademo.herokuapp.com/admin/posts")).data;
+      let post = (await axios.get("https://back2demo2-production.up.railway.app/admin/posts")).data;
 
       post = post.sort(function (a, b) {
         if (a.model.toLowerCase() > b.model.toLowerCase()) return 1;
@@ -78,7 +78,7 @@ export default function StockEdit() {
       } else {
         let bod = { ...change, id: id };
 
-        await axios.put("https://back25ademo.herokuapp.com/admin/modifica-stock", bod);
+        await axios.put("https://back2demo2-production.up.railway.app/admin/modifica-stock", bod);
 
         setChange({ ...change, amount: 0 });
         

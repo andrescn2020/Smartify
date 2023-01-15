@@ -56,7 +56,7 @@ const userVerificate = async () => {
         
         if(input){
     
-        await axios.put(`https://back25ademo.herokuapp.com/pregunta/${questionID}`, {
+        await axios.put(`https://back2demo2-production.up.railway.app/pregunta/${questionID}`, {
 
           answer: input
         });
@@ -69,7 +69,7 @@ const userVerificate = async () => {
 const editar = async (e)=>{
     let questionID = e.nativeEvent.path[1].id;
     
-    await axios.put(`https://back25ademo.herokuapp.com/pregunta/${questionID}`, {
+    await axios.put(`https://back2demo2-production.up.railway.app/pregunta/${questionID}`, {
 
         answer: null
       });
@@ -80,7 +80,7 @@ const editar = async (e)=>{
 const eliminar = async (e)=>{
     let questionID = e.nativeEvent.path[1].id
    
-    await axios.delete(`https://back25ademo.herokuapp.com/pregunta/${questionID}`);
+    await axios.delete(`https://back2demo2-production.up.railway.app/pregunta/${questionID}`);
     swal("Pregunta Eliminada")
       window.location.reload()
 }

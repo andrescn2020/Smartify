@@ -83,7 +83,7 @@ const correoEmail = async(e) =>{
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
+          `https://back2demo2-production.up.railway.app/user/${currentUser.email}`
         );
         if(user.data.banned){
 

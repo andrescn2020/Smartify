@@ -122,7 +122,7 @@ const Home = () => {
 
         if (currentUser.emailVerified) {
 
-          await axios.put(`https://back25ademo.herokuapp.com/verification/${currentUser.email}`)
+          await axios.put(`https://back2demo2-production.up.railway.app/verification/${currentUser.email}`)
 
         }
 

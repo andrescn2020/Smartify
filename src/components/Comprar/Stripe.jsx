@@ -162,7 +162,7 @@ const CheckoutForm = () => {
     
                const { id } = paymentMethod;
     
-                await axios.post("https://back25ademo.herokuapp.com/stripe/checkout", {
+                await axios.post("https://back2demo2-production.up.railway.app/stripe/checkout", {
 
                 id, 
                 amount: total * 100

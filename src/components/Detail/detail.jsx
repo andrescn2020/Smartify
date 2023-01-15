@@ -61,7 +61,7 @@ export default function Detail() {
   //   onAuthStateChanged(auth, async (currentUser) => {
   //     if (currentUser) {
   //       let user = await axios.get(
-  //         `https://back25ademo.herokuapp.com/user/${currentUser.email}`
+  //         `https://back2demo2-production.up.railway.app/user/${currentUser.email}`
   //       );
   //       if(user.data.banned){
 
@@ -102,7 +102,7 @@ export default function Detail() {
     onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         let user = await axios.get(
-          `https://back25ademo.herokuapp.com/user/${currentUser.email}`
+          `https://back2demo2-production.up.railway.app/user/${currentUser.email}`
         );
         setUser(user.data);
       }
@@ -122,7 +122,7 @@ export default function Detail() {
   const publicar = async (e) => {
     // let productID = e.nativeEvent.path[1].id;
     if (input) {
-      await axios.post(`https://back25ademo.herokuapp.com/pregunta`, {
+      await axios.post(`https://back2demo2-production.up.railway.app/pregunta`, {
         question: input,
         user_email: user.username,
         product_ID: PID.id,

@@ -37,7 +37,7 @@ export default function Card(props) {
   const addToFavourites = async () => {
     try {
 
-      let info = await axios.get(`https://back25ademo.herokuapp.com/user/${user.email}`);
+      let info = await axios.get(`https://back2demo2-production.up.railway.app/user/${user.email}`);
       
       let userInfo = info.data;
 
